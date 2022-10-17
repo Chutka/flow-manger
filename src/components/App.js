@@ -2,7 +2,7 @@
 import './App.css';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Stepper } from './Stepper';
+import { Flow } from './Flow';
 import { First, Second, Third } from '../containers';
 import { FIRST_PATH, SECOND_PATH, THIRD_PATH } from '../constants/paths';
 
@@ -38,13 +38,13 @@ const stepperConfig = {
 function App() {
   return (
     <BrowserRouter>
-      <Stepper config={stepperConfig}>
+      <Flow config={stepperConfig}>
         <Switch>
           {routes.map((route) => (
             <Route {...route} />
           ))}
         </Switch>
-      </Stepper>
+      </Flow>
     </BrowserRouter>
   );
 }
